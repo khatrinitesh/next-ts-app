@@ -1,0 +1,18 @@
+/* components/Navigation.module.css */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .button {
+    padding: 0.5rem;
+    border-radius: 9999px;
+    background-color: #e2e8f0; /* Tailwind's bg-gray-200 */
+  }
+  
+  .button:hover {
+    background-color: #cbd5e0; /* Tailwind's bg-gray-300 */
+  }
+  
