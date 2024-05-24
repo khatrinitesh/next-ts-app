@@ -1,6 +1,6 @@
 
 import Banner from "@/components/banner";
-import CustomApp from "@/repository/callout/1/CustomApp";
+import CustomApp from "@/repository/centertables/1/CustomApp";
 
 export default function Home() {
   return (

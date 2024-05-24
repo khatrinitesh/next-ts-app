@@ -10,6 +10,14 @@ html,body{
 :root{
   --whitecolor:#fff;
   --redcolor:#ff0000;
+  --color-primary: #0070f3;
+  --color-secondary: #1c1c1e;
+  --color-background: #ffffff;
+  --color-text: #000000;
+
+  --spacing-small: 8px;
+  --spacing-medium: 16px;
+  --spacing-large: 24px;
   
 }
 
@@ -30,9 +38,6 @@ header ul li a.active{
   background-color: var(--redcolor);
 }
 
-.mainContent{
-  height: calc(100% - 108px);
-}
 .grayscale{
   filter:grayscale(1)
 }

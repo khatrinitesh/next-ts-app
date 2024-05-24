@@ -1,11 +1,16 @@
+"use client"
 import React from 'react'
 import Example from './Example'
 
 const CustomApp = () => {
+  const handleClick = () => {
+    alert('hi')
+  }
   return (
     <>
-      <Example message="This is a success message!" type="success" />
-      <Example message="This is a danger message!" type="danger" />
+    <div>
+        <Example text="Btn" onClick={handleClick}/>
+    </div> 
     </>
   )
 }
