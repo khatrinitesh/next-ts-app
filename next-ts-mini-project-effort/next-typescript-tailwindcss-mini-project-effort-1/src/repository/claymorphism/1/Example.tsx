@@ -1,28 +1,30 @@
+"use client";
+import React, { useState } from "react";
 
-"use client"
-import React,{useState} from "react";
+interface CardProps {
+  title: string;
+  description: string;
+  imageUrl: string;
+}
 
-const Example: React.FC<MyComponentProps> = ({  initialActive=false}) => {
-
-    const [isActive, setIsActive] = useState(initialActive);
-
-    const toggleActive = () => {
-        setIsActive(!isActive);
-      };
-
-      const buttonClass = isActive
-    ? 'bg-blue-500 text-white'
-    : 'bg-gray-500 text-black';
+const Example: React.FC<MyComponentProps> = ({
+  title,
+  description,
+  imageUrl,
+}) => {
   return (
     <>
-       <div className="p-4">
-      <button
-        className={`p-2 rounded ${buttonClass}`}
-        onClick={toggleActive}
-      >
-        Toggle Me
-      </button>
-    </div>
+      <div className="max-w-sm mx-auto p-6 bg-clay shadow-clay-light rounded-xl">
+        <div className="flex items-center justify-center mb-4">
+          <img
+            src={imageUrl}
+            alt={title}
+            className="w-24 h-24 rounded-full shadow-clay-dark"
+          />
+        </div>
+        <h2 className="text-xl font-bold text-center text-gray-800">{title}</h2>
+        <p className="text-gray-600 text-center mt-2">{description}</p>
+      </div>
     </>
   );
 };

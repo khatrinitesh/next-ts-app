@@ -9,6 +9,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: '#f3f4f6',
+        clay: {
+          DEFAULT: '#e0e0e0',
+          light: '#ffffff',
+          dark: '#b0b0b0',
+        },
+      },
+      boxShadow: {
+        'clay-light': '9px 9px 16px #b0b0b0, -9px -9px 16px #ffffff',
+        'clay-dark': '9px 9px 16px #b0b0b0, -9px -9px 16px #ffffff',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
