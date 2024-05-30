@@ -1,6 +1,6 @@
 
 import Banner from "@/components/banner";
-import CustomApp from "@/repository/clickdropdowns/1/CustomApp";
+import CustomApp from "@/repository/closablelistitems/1/CustomApp";
 
 export default function Home() {
   return (
