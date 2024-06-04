@@ -116,3 +116,20 @@ header ul li a.active{
 .drop2::before {
   border-radius: 46% 50% 39% 54% / 56% 57% 50% 50%;
 } 
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Regular.eot');
+  src: url('../assets/fonts/Poppins-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../assets/fonts/Poppins-Regular.woff2') format('woff2'),
+      url('../assets/fonts/Poppins-Regular.woff') format('woff'),
+      url('../assets/fonts/Poppins-Regular.ttf') format('truetype'),
+      url('../assets/fonts/Poppins-Regular.svg#Poppins-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body{
+  font-family:'Poppins';
+}
