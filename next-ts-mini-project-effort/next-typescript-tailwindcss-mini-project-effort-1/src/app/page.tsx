@@ -1,5 +1,5 @@
 import Banner from "@/components/banner";
-import CustomApp from "@/repository/formvalidation/1/CustomApp";
+import CustomApp from "@/repository/gloweffect/1/CustomApp";
 
 export default function Home() {
   return (
