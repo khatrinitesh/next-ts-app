@@ -1,5 +1,5 @@
 import Banner from "@/components/banner";
-import CustomApp from "@/repository/googlesearch/1/CustomApp";
+import CustomApp from "@/repository/lightbox/1/CustomApp";
 
 export default function Home() {
   return (

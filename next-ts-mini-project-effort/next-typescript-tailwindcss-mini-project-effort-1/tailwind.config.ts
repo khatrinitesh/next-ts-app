@@ -18,10 +18,15 @@ const config: Config = {
           '0%': { opacity: 1 },
           '100%': { opacity: 0 },
         },
+        marquee: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
       },
       animation: {
         fadeIn: 'fadeIn 1s ease-in-out',
         fadeOut: 'fadeOut 1s ease-in-out',
+        'marquee': 'marquee 15s linear infinite',
       },
       colors: {
         primary: '#f3f4f6',
