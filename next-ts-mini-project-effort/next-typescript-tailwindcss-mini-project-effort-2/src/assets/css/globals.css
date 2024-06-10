@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body{
+    height: 100%;
+}
+
+
+.not-last-child-margin {
+    @apply mb-4;
+  }
+  
+.not-last-child-margin:last-child {
+    @apply mb-0;
+}
+
