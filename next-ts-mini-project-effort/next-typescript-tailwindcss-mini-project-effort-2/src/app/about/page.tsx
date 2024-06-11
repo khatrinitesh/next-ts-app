@@ -1,13 +1,12 @@
 import React from "react";
 import Banner from "@/components/Banner";
-import CustomApp from "@/components/JavascriptArray/Keys/1/CustomApp";
-
+import CustomApp from "@/components/JavascriptReference/trunc/1/CustomApp";
 
 // define an interface for the items
-interface Item{
-  id:number;
-  name:string;
-  score:number;
+interface Item {
+  id: number;
+  name: string;
+  score: number;
 }
 
 const About = () => {
@@ -20,37 +19,37 @@ const About = () => {
     { id: 5, name: "Eve", score: 80 },
   ];
 
-    // Example arrays of items
-    const array1: Item[] = [
-      { id: 1, name: "Alice", score: 85 },
-      { id: 2, name: "Bob", score: 92 },
-    ];
-  
-    const array2: Item[] = [
-      { id: 3, name: "Charlie", score: 73 },
-      { id: 4, name: "Diana", score: 98 },
-    ];
-  
-    const array3: Item[] = [
-      { id: 5, name: "Eve", score: 80 },
-      { id: 1, name: "Alice", score: 90 }, // Duplicate id with updated score
-    ];
-    const concatenatedArray:Item[] = [...array1,...array2,...array3]
+  // Example arrays of items
+  const array1: Item[] = [
+    { id: 1, name: "Alice", score: 85 },
+    { id: 2, name: "Bob", score: 92 },
+  ];
+
+  const array2: Item[] = [
+    { id: 3, name: "Charlie", score: 73 },
+    { id: 4, name: "Diana", score: 98 },
+  ];
+
+  const array3: Item[] = [
+    { id: 5, name: "Eve", score: 80 },
+    { id: 1, name: "Alice", score: 90 }, // Duplicate id with updated score
+  ];
+  const concatenatedArray: Item[] = [...array1, ...array2, ...array3];
   // Filter even scores
-  const evenScores2 = items.filter(item => item.score % 2 === 0);
+  const evenScores2 = items.filter((item) => item.score % 2 === 0);
 
   const scores = [85, 92, 73, 98, 80];
-  const evenScores = scores.filter(num => num % 2 === 0);
+  const evenScores = scores.filter((num) => num % 2 === 0);
 
-  const sideLengths = [5,6,7]
-  const areas = sideLengths.map(num => num * num);
+  const sideLengths = [5, 6, 7];
+  const areas = sideLengths.map((num) => num * num);
 
   const nestedGroceries = [
     ["Apples", ["Red", "Green"]],
-    ["Milk", ["Whole", "2%"]]
+    ["Milk", ["Whole", "2%"]],
   ];
   const flatGroceries = nestedGroceries.flat();
-  
+
   const guestList = ["Alice", "Bob", "Charlie", "Alice"];
   const uniqueGuestList = [...new Set(guestList)];
 
@@ -58,30 +57,30 @@ const About = () => {
   const message = age >= 18 ? "Welcome!" : "Sorry, not yet.";
 
   const str = "Hello, world!";
- const reversedStr = str.split('').reverse().join('');
+  const reversedStr = str.split("").reverse().join("");
 
- const user = { name: "Alice", age: 30 };
-const hasEmail = "email" in user;
+  const user = { name: "Alice", age: 30 };
+  const hasEmail = "email" in user;
 
-const greet = (name = "Guest") => `Hello, ${name}!`;
+  const greet = (name = "Guest") => `Hello, ${name}!`;
 
-const numbers = [1, 0, null, 3];
-const compactNumbers = numbers.filter(Boolean);
+  const numbers = [1, 0, null, 3];
+  const compactNumbers = numbers.filter(Boolean);
 
-const prop = "score";
-const person = { [prop]: 90 };
+  const prop = "score";
+  const person = { [prop]: 90 };
 
-// Merge properties of objects with the same id
-const mergedArray = concatenatedArray.reduce((acc, current) => {
-  const existingItem = acc.find(item => item.id === current.id);
-  if (existingItem) {
-    // Merge the properties
-    existingItem.score = current.score; // For example, update the score
-  } else {
-    acc.push(current);
-  }
-  return acc;
-}, [] as Item[]);
+  // Merge properties of objects with the same id
+  const mergedArray = concatenatedArray.reduce((acc, current) => {
+    const existingItem = acc.find((item) => item.id === current.id);
+    if (existingItem) {
+      // Merge the properties
+      existingItem.score = current.score; // For example, update the score
+    } else {
+      acc.push(current);
+    }
+    return acc;
+  }, [] as Item[]);
   return (
     <>
       <div className="content">
@@ -90,8 +89,8 @@ const mergedArray = concatenatedArray.reduce((acc, current) => {
           desc="Laboris id labore adipisicing occaecat elit."
         />
         <div className="container mx-auto">
-        <CustomApp/>
-          <div className="blockContent border-1 border-b">
+          <CustomApp />
+          {/* <div className="blockContent border-1 border-b">
             <h3 className="font-bold">Even Score</h3>
             <span>{evenScores.join(', ')}</span>
           </div>
@@ -149,7 +148,7 @@ const mergedArray = concatenatedArray.reduce((acc, current) => {
                 <p><strong>Score:</strong> {val.score}</p>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </>
