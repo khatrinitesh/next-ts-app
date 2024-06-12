@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "@/components/Banner";
-import CustomApp from "@/components/JavascriptReference/trunc/1/CustomApp";
+import CustomApp from "@/components/JavascriptReference/size/1/CustomApp";
 
 // define an interface for the items
 interface Item {
