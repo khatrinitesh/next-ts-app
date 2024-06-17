@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+hmtl,body{
+  height: 100%;
+}
+
+.listBullet li:not(:last-child){
+  margin:0 10px 0 0;
+}
+
+.header .listBullet li a{
+  color:#fff;
+  display: block;
+  padding: 10px;
+}
+
+.header .listBullet li .active{
+  background-color: red;
+}
