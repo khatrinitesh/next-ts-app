@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'poppinsmedium';
+    src: url('../fonts/poppinsmedium.eot');
+    src: url('../fonts/poppinsmedium.eot') format('embedded-opentype'),
+         url('../fonts/poppinsmedium.woff2') format('woff2'),
+         url('../fonts/poppinsmedium.woff') format('woff'),
+         url('../fonts/poppinsmedium.ttf') format('truetype'),
+         url('../fonts/poppinsmedium.svg#poppinsmedium') format('svg');
+}
+
+.container{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+:root{
+    --ffpoppinsMedium:'poppinsmedium'
+}
+
 .header .listBullet li a{
     color:#fff;
     display: block;
@@ -10,5 +29,5 @@
 }
 
 .header .listBullet li a.active{
-    background-color: red;
+    background-color: #f27a8a;
 }

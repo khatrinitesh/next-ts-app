@@ -7,7 +7,7 @@ const Header = () => {
 
     const pathname = usePathname();
   return (
-    <header className="header bg-black">
+    <header className="header bg-tertiarycolor">
         <ul className='flex listBullet'>
             <li>
                 <Link href="/" className={`${pathname === "/" ? 'active' : ''}`}>Home</Link>

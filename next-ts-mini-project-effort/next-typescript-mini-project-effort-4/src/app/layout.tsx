@@ -17,13 +17,13 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className='h-screen flex flex-col'>
+      <body className='h-screen flex flex-col font-poppins'>
         {/* S > HEADER */}
         {shouldShowHeaderFooter && <Header/>}
         {/* E ? HEADER */}
 
         {/* S > MAIN CONTENT */}
-        <div className='mainContent grow'>
+        <div className='mainContent grow bg-mainbodycolor'>
           {children}
         </div>
         {/* E > MAIN CONTENT */}

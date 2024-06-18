@@ -8,6 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        "poppins":'poppinsmedium'
+      },
+      colors:{
+        "primarycolor":"#f27a8a",
+        "secondarycolor":"#ea546c",
+        "tertiarycolor":"#961b3c",
+        "mainbodycolor":"#f7d794"
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
