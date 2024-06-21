@@ -2,9 +2,9 @@
 import Wallpaper from "../../../assets/img/wallpaper.jpg";
 import Wallpaper2 from "../../../assets/img/wallpaper2.jpg";
 import Wallpaper3 from "../../../assets/img/wallpaper3.jpg";
-import { Quote } from './interface';
+import { UserData } from './interface';
 
-export const quotes: Quote[] = [
+export const userdata: UserData[] = [
     {
         text: "The way to get started is to quit talking and begin doing.",
         author: "Walt Disney",

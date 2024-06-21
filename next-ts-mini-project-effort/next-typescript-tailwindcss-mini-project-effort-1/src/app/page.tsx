@@ -1,6 +1,5 @@
 import Banner from "@/components/banner";
-import CustomApp from "@/repository/responsiveimages/1/CustomApp";
-
+import CustomApp from "@/repository/searchphoto/1/CustomApp";
 
 export default function Home() {
   
