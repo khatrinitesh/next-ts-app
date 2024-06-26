@@ -10,6 +10,11 @@ const config: Config = {
   theme: {
     extend: {
       keyframes: {
+        shake: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '10%, 30%, 50%, 70%, 90%': { transform: 'translateX(-10px)' },
+          '20%, 40%, 60%, 80%': { transform: 'translateX(10px)' },
+        },
         fadeIn: {
           '0%': { opacity: 0 },
           '100%': { opacity: 1 },
@@ -26,7 +31,10 @@ const config: Config = {
       animation: {
         fadeIn: 'fadeIn 1s ease-in-out',
         fadeOut: 'fadeOut 1s ease-in-out',
-        'marquee': 'marquee 15s linear infinite',
+        marquee: 'marquee 15s linear infinite',
+        shake: 'shake 0.8s cubic-bezier(.36,.07,.19,.97) infinite', // Combine shake animation here
+        spin: 'spin 1s linear infinite',
+        bounce: 'bounce 1s infinite',
       },
       colors: {
         primary: '#f3f4f6',

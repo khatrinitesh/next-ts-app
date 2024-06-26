@@ -1,0 +1,12 @@
+/* SignupForm.css */
+
+.Toastify__toast--success {
+    background-color: #68d391;
+    color: #fff;
+  }
+  
+  .Toastify__toast--error {
+    background-color: #f56565;
+    color: #fff;
+  }
+  

@@ -1,5 +1,5 @@
 import Banner from "@/components/banner";
-import CustomApp from "@/repository/contactchips/1/CustomApp";
+import CustomApp from "@/repository/signupform/1/CustomApp";
 
 export default function Home() {
   
