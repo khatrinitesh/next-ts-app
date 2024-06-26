@@ -1,5 +1,5 @@
 import Banner from "@/components/banner";
-import CustomApp from "@/repository/truncatestringellipsis/1/CustomApp";
+import CustomApp from "@/repository/zigzagwithlayout/1/CustomApp";
 
 export default function Home() {
   
