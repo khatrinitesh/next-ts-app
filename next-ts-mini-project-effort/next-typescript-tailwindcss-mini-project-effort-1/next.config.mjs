@@ -7,7 +7,7 @@ const nextConfig = {
     },
     webpack: (config, { isServer }) => {
       config.module.rules.push({
-        test: /\.(mp4|webm|ogg|swf|ogv)$/,
+        test: /\.(mp4|webm|ogg|swf|ogv|mp3)$/,
         use: {
           loader: "file-loader",
           options: {
