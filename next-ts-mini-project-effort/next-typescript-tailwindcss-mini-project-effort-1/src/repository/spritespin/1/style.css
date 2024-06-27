@@ -1,0 +1,9 @@
+@keyframes spin {
+    from {
+      background-position: 0px;
+    }
+    to {
+      background-position: -100%;
+    }
+  }
+  
