@@ -1,5 +1,5 @@
 import Banner from "@/components/banner";
-import CustomApp from "@/repository/stackedform/1/Custom";
+import CustomApp from "@/repository/404error/1/Custom";
 
 export default function Home() {
   
