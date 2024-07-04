@@ -1,6 +1,5 @@
 import React from "react";
 import Banner from "@/components/Banner";
-import CustomApp from "@/components/JavascriptReference/ifelsestatement/1/CustomApp";
 
 // define an interface for the items
 interface Item {
@@ -89,7 +88,6 @@ const About = () => {
           desc="Laboris id labore adipisicing occaecat elit."
         />
         <div className="container mx-auto">
-          <CustomApp />
           {/* <div className="blockContent border-1 border-b">
             <h3 className="font-bold">Even Score</h3>
             <span>{evenScores.join(', ')}</span>

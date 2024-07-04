@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from 'react'
 
-
 interface Person {
     name:string;
     isAdmin:boolean;
