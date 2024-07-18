@@ -1,13 +1,18 @@
-import Banner from "@/components/banner";
-import MainLayout from "@/layout/MainLayout";
 import Image from "next/image";
 
-export default function Home() {  
+export default function Home() {
   return (
     <>
-    <MainLayout>
-       <Banner title="Home" description="In culpa excepteur amet irure in enim nostrud qui ut ea aliquip."/>
-    </MainLayout>
+      <h2 className="font-bold text-[32px]">Head title bold</h2>
+      <h2 className="font-medium text-[32px]">Head title medium</h2>
+      <h2 className="font-semibold text-[32px]">Head title semibold</h2>
+      <h2 className="font-normal text-[32px]">Head title regular</h2>
+      <h2 className="font-light text-[32px]">Head title light</h2>
+      <h2 className="font-extralight text-[32px]">Head title extralight</h2>
+      <h2 className="font-extrabold text-[32px]">Head title extrabold</h2>
+      <h2 className="font-black text-[32px]">Head title black</h2>
+      <p className="desc font-medium">Fugiat nulla ipsum sint laborum aute.</p>
+      <p className="desc font-semibold italic">Fugiat nulla ipsum sint laborum aute.</p>
     </>
   );
 }

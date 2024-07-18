@@ -1,35 +1,34 @@
-"use client";
-import Link from "next/link";
-import React from "react";
-import { usePathname } from "next/navigation";
+"use client"
+import Link from 'next/link';
+import { constants } from './../app/constants/constants';
+import { usePathname } from 'next/navigation';
 
-const Header = () => {
-  // router
-  const pathname = usePathname(); 
+interface Props {
+  constants: Constants;
+}
 
-  // navlinks
-  const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/service", label: "Service" },
-    { href: "/contact", label: "Contact" },
-  ];
+const navLinks = [
+  { href: '/', label: 'title' },
+  { href: '/about', label: 'about' },
+  { href: '/service', label: 'service' },
+  { href: '/contact', label: 'contact' },
+];
+
+const Header:React.FC<Props> = ({constants}) => {
+
+  const pathname = usePathname();
 
   return (
-    <header className="bg-black p-2 header">
-       <div className="container mx-auto">
-        <ul className="flex">
-          {navLinks.map((link) => (
-            <li key={link.href}>
-              <Link href={link.href} className={`text-white font-bold px-2 ${pathname === link.href ? "bg-[red]" : ""}`}>
-                  {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+    <header className='header bg-black '>
+     <ul className='flex'>
+        {navLinks.map((link) => (
+          <li key={link.href}>
+            <Link href={link.href} className={`text-white block px-6 py-2 ${pathname === link.href ? 'bg-gray-700' : ''}`}>{constants[link.label]}</Link>
+          </li>
+        ))}
+      </ul>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

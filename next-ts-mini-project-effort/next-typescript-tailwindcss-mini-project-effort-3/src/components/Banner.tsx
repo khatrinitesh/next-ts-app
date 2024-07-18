@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Banner = ({title,desc,bannerStyle}) => {
+const Banner = ({title,description}) => {
   return (
-    <div className={`${bannerStyle} p-5`}>
-        <div className="container mx-auto">
-        <h2 className='font-bold text-[32px] uppercase'>{title}</h2>
-        <p className='text-white font-semibold'>{desc}</p>
+    <div className='bannerContent py-6 bg-cyan-100'>
+       <div className="container mx-auto px-[1rem]">
+        <h3 className="title text-[32px] font-bold">{title}</h3>
+        <p className="desc text-[14px] font-medium">{description}</p>
         </div>
     </div>
   )

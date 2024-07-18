@@ -1,77 +1,62 @@
-"use client";
-import Banner from "@/components/Banner";
-import { log } from "console";
-import Link from "next/link";
-import React, { useState, useEffect } from "react";
+"use client"
+import Banner from '@/components/Banner'
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
+import React, { useState,useEffect } from 'react';
 
-interface User{
-  id:number;
-  name:string;
-  email:string;
-  username:string;
-}
-
-
-const ServiceList = () => {
-  const [data, setData] = useState<User[]>([]);
+const Service = () => {
+  const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState("");
   const baseurl = "https://jsonplaceholder.typicode.com/users";
+  const {id} = useParams();
 
   const fetchData = async () => {
-    setLoading(true);
     try {
+      setLoading(true);
       const response = await fetch(`${baseurl}`);
-      if (!response) {
-        throw new Error(`sorry something went wrong ${response.status}`);
+      if (!response.ok) {
+        throw new Error(`Sorry something went wrong ${response.status}`);
       }
-      const finalData = await response.json();
-      setData(finalData)
+      const result = await response.json();
+      setData(result);
+      console.log(result);
       setLoading(false);
-      console.log(finalData);
-    } catch (error: any) {
-      setError(error.message);
+    } 
+    catch (error) {
+      setError(`${error.message}`);
       setLoading(false);
     }
   };
+
+  const handleDel = (id) => {
+    const newData = data.filter((val) => val.id !== id)
+    setData(newData);
+    console.log(newData);
+    
+  }
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  const handleDel  = (id:number)=> {
-    const newData = data.filter((item) => item.id !== id)
-    setData(newData)
-  }
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-  if (error) {
-    return <div>{error}</div>;
-  }
   return (
-    <>
-      <div className="content">
-        <Banner
-          title="ServiceList"
-          desc="Officia do et anim velit irure cupidatat do non."
-        />
-        <div className="container mx-auto">
-          {data.map((val, id) => (
-            <div  key={val.id} className="border-[red] block border p-2 shadow not-last-child-margin">
-            <Link href={`/service/${val.id}`}>
-              <h3>{val.name}</h3>
-              <p>{val.username}</p>
-              <p>{val.email}</p>
-            </Link>
-            <button onClick={() => handleDel(val.id)}>&times;</button>
-            </div>
-          ))}
+    <div className='content'>
+      <Banner bannerStyle="bg-cyan-500" title="service" desc="Nostrud ex ad exercitation sit ullamco consectetur id quis tempor."/>
+      <div className="container mx-auto">
+      {data.map((val) => (
+        <div key={val.id} className="shadow p-2 border mb-2">
+          <Link href={`/service/${val.id}`}>
+          <h3>{val.name}</h3>
+          <h3>{val.email}</h3>
+          <h3>{val.username}</h3>
+          </Link>
+          <button onClick={() => handleDel(val.id)}>Delete</button>
         </div>
+      ))}
       </div>
-    </>
-  );
-};
+    </div>
+  )
+}
 
-export default ServiceList;
+export default Service

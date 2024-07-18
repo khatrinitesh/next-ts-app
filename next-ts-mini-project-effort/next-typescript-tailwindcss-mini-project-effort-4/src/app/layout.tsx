@@ -1,5 +1,14 @@
 import type { Metadata } from "next";
+import { Montserrat,Roboto  } from 'next/font/google';
 import "./globals.css";
+
+
+// configure the montserrat font
+const montserrat = Montserrat({
+  subsets: ['latin'], // Choose subsets according to your needs
+  weights: [400, 700], // Include font weights you plan to use
+});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -13,8 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="icon" href="./favicon.ico"/>
-      <body>{children}</body>
+      <body className={`${montserrat.className}`}>{children}</body>
     </html>
   );
 }

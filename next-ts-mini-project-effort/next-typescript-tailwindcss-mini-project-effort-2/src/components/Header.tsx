@@ -1,37 +1,35 @@
-"use client "
-import Link from 'next/link'
-import { usePathname } from 'next/navigation';
-import React from 'react';
-
-
+"use client";
+import Link from "next/link";
+import React from "react";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
-    const pathname = usePathname();
-    const isHomePage = pathname === "/";
+  // router
+  const pathname = usePathname(); 
 
-    const navLinks = [
-        { href: "/", label: "Home" },
-        { href: "/about", label: "About" },
-        { href: "/service", label: "Service" },
-        { href: "/users", label: "Users" },
-        { href: "/contact", label: "Contact" },
-    ];
+  // navlinks
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/service", label: "Service" },
+    { href: "/contact", label: "Contact" },
+  ];
+
   return (
-    <header className={`header p-4 ${isHomePage ? 'bg-[blue]' : 'bg-[gray]'}`}>
-            <ul className='flex'>
-                {navLinks.map(link => (
-                    <li key={link.href}>
-                        <Link 
-                            className={`text-white font-bold px-2 ${pathname === link.href ? 'bg-[red]' : ''}`}
-                            href={link.href}
-                        >
-                            {link.label}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-        </header>
-  )
-}
+    <header className="bg-black p-2 header">
+       <div className="container mx-auto">
+        <ul className="flex">
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <Link href={link.href} className={`text-white font-bold px-2 ${pathname === link.href ? "bg-[red]" : ""}`}>
+                  {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </header>
+  );
+};
 
-export default Header
+export default Header;

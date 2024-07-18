@@ -3,14 +3,9 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <>
-     <div className='content'>
-        <Banner title="Contact" desc="Officia do et anim velit irure cupidatat do non."/>
-        <div className="container mx-auto">
-            
-        </div>
-     </div>
-    </>
+    <div className='content'>
+      <Banner bannerStyle="bg-cyan-500" title="contact" desc="Nostrud ex ad exercitation sit ullamco consectetur id quis tempor."/>
+    </div>
   )
 }
 

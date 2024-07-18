@@ -1,11 +1,11 @@
-import Banner from '@/components/Banner'
-import React from 'react'
+import Banner from '@/components/banner'
+import MainLayout from '@/layout/MainLayout'
 
 const Contact = () => {
   return (
-    <div className='content'>
-      <Banner bannerStyle="bg-cyan-500" title="contact" desc="Nostrud ex ad exercitation sit ullamco consectetur id quis tempor."/>
-    </div>
+    <MainLayout>
+        <Banner title="Contact page" description="Quis sint sunt eu pariatur sint irure magna velit sunt excepteur eu."/>
+    </MainLayout>
   )
 }
 

@@ -1,80 +1,57 @@
 "use client"
+import React, { useEffect, useState } from "react";
 import Banner from "@/components/Banner";
-import { log } from "console";
-import { useParams, usePathname,useRouter } from "next/navigation";
-import React, { useState,useEffect } from "react";
+import { useParams,useRouter } from "next/navigation";
 
-interface User{
-    id:number;
-    name:string;
-    email:string;
-    username:string;
-}
+const page = () => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const baseurl = "https://jsonplaceholder.typicode.com/users";
+  const {id} = useParams();
 
-const ServiceDetail = () => {
-    const [data, setData] = useState<User | null>(null);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState<string | null>(null);
-    const baseurl = "https://jsonplaceholder.typicode.com/users";
-    const { id } = useParams();
-    const router = useRouter();
+  const router = useRouter();
 
-    const btnBack = () => {
-        router.push('/service');
-    }
-  
-    const fetchData = async () => {
+  const fetchData = async () => {
+    try {
       setLoading(true);
-      try {
-        const response = await fetch(`${baseurl}/${id}`);
-        if (!response.ok) {
-          throw new Error(`Sorry, something went wrong: ${response.status}`);
-        }
-        const finalData = await response.json();
-        setLoading(false);
-        setData(finalData);
-      } catch (error: any) {
-        setError(error.message);
-        setLoading(false);
+      const response = await fetch(`${baseurl}/${id}`);
+      if (!response.ok) {
+        throw new Error(`Sorry something went wrong ${response.status}`);
       }
-    };
-  
-    useEffect(() => {
-      fetchData();
-    }, [name]);
-  
+      const result = await response.json();
+      setData(result);
+      console.log(result);
+      setLoading(false);
+    } 
+    catch (error) {
+      setError(`${error.message}`);
+      setLoading(false);
+    }
+  };
 
-  if(loading){
-    return(
-      <div>Loading...</div>
-    )
+  useEffect(() => {
+    fetchData();
+  }, [id]);
+
+  const handleBack = () => {
+    router.push('/service');
   }
-  if(error){
-    return(
-      <div>{error}</div>
-    )
-  }
-  if (!data) {
-    return <div>No data found</div>;
-  }
+  
   return (
-    <>
-      <div className="content">
-        <Banner
-          title="ServiceDetail"
-          desc="Officia do et anim velit irure cupidatat do non."
-        />
-        <div className="container mx-auto">
-        <button onClick={btnBack} className="bg-blue-500 text-white rounded px-5 py-2">Back</button>
-        <div className="p-4 border-b border-gray-200">
-          <h3 className="text-xl font-bold">{data.name}</h3>
-          <p>{data.username}</p>
-          <p>{data.email}</p>
-        </div>
-        </div>
+    <div className="content">
+      <Banner
+        bannerStyle="bg-cyan-500"
+        title="serivce detail"
+        desc="Nostrud ex ad exercitation sit ullamco consectetur id quis tempor."
+      />
+      <div className="container mx-auto">
+        <button onClick={handleBack} className="rounded bg-cyan-500 rounded px-5 py-2">Back</button>
+        <hr/>
+            {data.id} - {data.name}
       </div>
-    </>
+    </div>
   );
 };
 
-export default ServiceDetail;
+export default page;
