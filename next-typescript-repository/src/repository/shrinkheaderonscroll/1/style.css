@@ -1,0 +1,16 @@
+/* Header.css */
+
+.header {
+    height: 80px; /* Initial height of the header */
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.3s ease; /* Smooth transition for height change */
+  }
+  
+  .header.shrink {
+    height: 50px; /* Shrunken height of the header */
+  }
+  

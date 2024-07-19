@@ -1,0 +1,31 @@
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+  /* Secondary Colors */
+  .bg-secondary {
+    background-color: #718096; /* Gray */
+  }
+
+  .text-secondary {
+    color: #718096; /* Gray */
+  }
+
+  .border-secondary {
+    border-color: #718096; /* Gray */
+  }
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  /* Primary Colors */
+  .bg-primary {
+    background-color: #3490dc; /* Blue */
+  }
+
+  .text-primary {
+    color: #3490dc; /* Blue */
+  }
+
+  .border-primary {
+    border-color: #3490dc; /* Blue */
+  }
+}

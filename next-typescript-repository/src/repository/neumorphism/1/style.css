@@ -1,0 +1,21 @@
+/* styles/globals.css */
+
+.neumorphic-button {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    box-shadow: 6px 6px 12px #bfbfbf,
+                -6px -6px 12px #ffffff;
+  }
+  
+  .neumorphic-button:hover {
+    box-shadow: 2px 2px 8px #bfbfbf,
+                -2px -2px 8px #ffffff;
+  }
+  
+  .neumorphic-button:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.3);
+  }
+  

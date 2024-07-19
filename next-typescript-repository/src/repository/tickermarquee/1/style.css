@@ -1,0 +1,15 @@
+/* TickerMarquee.css */
+
+@keyframes tickerAnimation {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.ticker {
+    animation: tickerAnimation 20s linear infinite;
+    white-space: nowrap;
+}
