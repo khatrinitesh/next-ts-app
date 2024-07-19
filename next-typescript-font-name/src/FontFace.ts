@@ -1,12 +1,21 @@
-import { Montserrat,Playfair,Poppins  } from 'next/font/google';
+import { Montserrat, Poppins, Open_Sans } from "next/font/google";
 
-// configure the montserrat font
-export const montserrat = Montserrat({
-    subsets: ['latin'], // Choose subsets according to your needs
-    weights: [400, 700], // Ensure these weights are available for Montserrat
-  });
+// Declare the Montserrat font with specific weights
+export const montserrat = Montserrat({ 
+  subsets: ['latin'], 
+  variable: "--font-montserrat" 
+});
 
-  export const playfair = Playfair({
-    subsets: ['latin'],
-    weights: [400, 700], // Use available weights for Playfair
-  });
+// Declare the Poppins font with specific weights
+export const poppins = Poppins({ 
+  subsets: ['latin'], 
+  variable: "--font-poppins",
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'] // Specify the weights you need
+});
+ 
+// Declare the Open Sans font with specific weights
+export const opensans = Open_Sans({ 
+  subsets: ['latin'], 
+  variable: "--font-opensans",
+  weight: [ '300', '400', '500', '600', '700', '800',] // Specify the weights you need
+});

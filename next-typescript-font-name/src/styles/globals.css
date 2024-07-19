@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,::after,::before{
+    font-family: var(--font-montserrat);
+}
+
+.desc{
+    font-family: var(--font-opensans);
+    color:blue;
+}
+.headTitlePoppins{
+    font-family: var(--font-poppins);
+    color:red;
+}
