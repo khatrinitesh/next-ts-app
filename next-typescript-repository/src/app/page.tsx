@@ -1,5 +1,6 @@
 "use client"
 
+import ActiveApp from '@/repository/activeClass/1/2/App';
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 
@@ -32,6 +33,7 @@ export default function Home() {
       <BannerContainer>
         Welcome to Our Website!
       </BannerContainer>
+      <ActiveApp/>
     </motion.div>
     </>
   );
