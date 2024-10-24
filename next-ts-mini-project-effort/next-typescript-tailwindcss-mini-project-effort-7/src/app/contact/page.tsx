@@ -1,16 +1,19 @@
-import AppLayout from "@/layout/AppLayout";
-import Banner from "@/layout/Banner";
-import Image from "next/image";
+import MainLayout from '@/layout/MainLayout';
+import React from 'react';
+import FillForm from './../../components/FillForm';
 
-export default function Contact() {
+const Contact = () => {
   return (
     <>
-    <div className="content">
-      <AppLayout>
-        <Banner title="Contact" desc="Enim cillum excepteur est officia id magna ex do ipsum ex reprehenderit mollit eu eiusmod."/>
-        
-      </AppLayout>
-    </div>
+       <MainLayout>
+       <div className="container mx-auto">
+       Contact
+       <br/>
+       <FillForm/>
+       </div>
+      </MainLayout>
     </>
   );
 }
+
+export default Contact;

@@ -1,17 +1,18 @@
-import React from 'react'
-import Banner from '@/layout/Banner/Banner';
-import MainLayout from "@/layout/MainLayout/MainLayout";
+import Banner from "@/layout/Banner";
+import MainLayout from "@/layout/MainLayout";
+import Image from "next/image";
 
-const Contact = () => {
+export default function Contact() {
   return (
-    <MainLayout>
-    <div className='content'>
-      <div className="container mx-auto">
-          <Banner title="Contact" description="Esse aute consequat consectetur ipsum proident culpa do ad."/>
-      </div>
-  </div> 
-  </MainLayout>
-  )
+    <>
+     <MainLayout>
+      <div className="content ContactPage">
+        <Banner title="Contact" description="Laborum commodo ad elit cupidatat ullamco laboris nisi excepteur."/>
+       <div className="container mx-auto">
+        
+       </div>
+       </div>
+     </MainLayout>
+    </>
+  );
 }
-
-export default Contact

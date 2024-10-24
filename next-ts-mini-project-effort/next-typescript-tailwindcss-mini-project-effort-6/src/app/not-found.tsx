@@ -1,20 +1,36 @@
-'use client'
-import BtnPrimary from '@/components/BtnPrimary'
-import Link from 'next/link'
+"use client"
+import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
- 
-export default function NotFound() {
 
-    const router = useRouter();
+const NotFound: React.FC = () => {
+  const router = useRouter();
 
-    const handleBack = () => {
-        router.push('/')
-    }
+  useEffect(() => {
+    // Redirect to home page after 3 seconds
+    const timer = setTimeout(() => {
+      router.push('/');
+    }, 3000);
+
+    // Cleanup timer
+    return () => clearTimeout(timer);
+  }, [router]);
+
+  const handleRedirect = () => {
+    router.push('/');
+  };
+
   return (
-    <div className="errorContent h-screen flex flex-col items-center justify-center bg-gray-400">
-      <h2 className="font-bold text-[32px]">Not Found</h2>
-      <p className="font-medium text-[16px] mb-2">Could not find requested resource</p>
-      <BtnPrimary label="Return Home" onClick={handleBack}/>
+    <div className="text-center mt-10">
+      <h1 className="text-4xl">404 - Page Not Found</h1>
+      <p className="mt-4">You will be redirected to the home page shortly.</p>
+      <button
+        onClick={handleRedirect}
+        className="mt-4 bg-blue-500 text-white p-2 rounded"
+      >
+        Go to Home
+      </button>
     </div>
-  )
-}
+  );
+};
+
+export default NotFound;

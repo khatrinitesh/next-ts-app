@@ -1,19 +1,26 @@
-import AppLayout from "@/layout/AppLayout";
-import Banner from "@/layout/Banner";
-import Image from "next/image";
-import UsersList from './../../components/UsersList';
+'use client'
+import BtnPrimary from '@/components/BtnPrimary';
+import MainLayout from '@/layout/MainLayout';
+import { useRouter } from 'next/navigation';
+import React from 'react';
 
-export default function Service() {
-  return (
-    <>
-    <div className="content">
-      <AppLayout>
-        <Banner title="Service" desc="Enim cillum excepteur est officia id magna ex do ipsum ex reprehenderit mollit eu eiusmod."/>
-        <div className="container mx-auto">
-          <UsersList/>
-        </div>
-      </AppLayout>
+const Service = () => {
+  const router = useRouter();
+
+  const handleNext = () => {
+    router.push('/portfolio')
+  }
+return (
+  <>
+    <MainLayout>
+    <div className="container mx-auto">
+    Service
+
+    <BtnPrimary onClick={handleNext}>Next</BtnPrimary>
     </div>
-    </>
-  );
+    </MainLayout>
+  </>
+);
 }
+
+export default Service;

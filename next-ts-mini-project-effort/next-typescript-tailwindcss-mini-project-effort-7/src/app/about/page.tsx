@@ -1,16 +1,28 @@
-import AppLayout from "@/layout/AppLayout";
-import Banner from "@/layout/Banner";
-import Image from "next/image";
+'use client';
+import BtnPrimary from '@/components/BtnPrimary';
+import MainLayout from '@/layout/MainLayout';
+import { useRouter } from 'next/navigation';
+import React from 'react';
 
-export default function About() {
+const About = () => {
+
+    const router = useRouter();
+
+    const handleNext = () => {
+      router.push('/service')
+    }
   return (
     <>
-    <div className="content">
-      <AppLayout>
-        <Banner title="About" desc="Enim cillum excepteur est officia id magna ex do ipsum ex reprehenderit mollit eu eiusmod."/>
-        
-      </AppLayout>
-    </div>
+      <MainLayout>
+      <div className="container mx-auto">
+      About
+      <BtnPrimary onClick={handleNext}>Next</BtnPrimary>
+      </div>
+
+     
+      </MainLayout>
     </>
   );
 }
+
+export default About;

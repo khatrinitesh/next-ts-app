@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'poppinsmedium';
+  src: url('../../public/fonts/poppinsmedium.eot');
+  src: url('../../public/fonts/poppinsmedium.eot') format('embedded-opentype'),
+       url('../../public/fonts/poppinsmedium.woff2') format('woff2'),
+       url('../../public/fonts/poppinsmedium.woff') format('woff'),
+       url('../../public/fonts/poppinsmedium.ttf') format('truetype'),
+       url('../../public/fonts/poppinsmedium.svg#poppinsmedium') format('svg');
+}
+
+:root{
+  --ffPoppinsMedium:'poppinsmedium'
+}
+
+
+html,body{
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.appLayout,.bodyWrapper{
+  overflow-x: hidden;
+  overflow-y: auto;
+  height:100vh;
+  min-height: 100vh;
+}

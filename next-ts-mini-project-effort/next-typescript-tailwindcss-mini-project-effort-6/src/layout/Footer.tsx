@@ -1,19 +1,15 @@
-import SocialMediaComp from '@/components/SocialMedia';
-import React from 'react'
+import React from 'react';
 
 const Footer:React.FC = () => {
 
     const currentYear = new Date().getFullYear();
   return (
-    <footer className='bg-black text-white p-2'>
-        <div className="container mx-auto">
-          <div className="innerFooter flex justify-between items-center">
-              <p>&copy; copyright {currentYear}</p>
-            <SocialMediaComp/>
-          </div>
-        </div>
+    <footer className='footer py-2 bg-black'>
+      <div className="container mx-auto">
+        <p className="text-white py-2">&copy; copyright {currentYear}</p>
+      </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
