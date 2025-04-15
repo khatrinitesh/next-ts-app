@@ -9,7 +9,7 @@ const MainLayout:React.FC<MainLayoutProps> = ({children}) => {
       <Header/>
       <div className='mainContent h-full'>
         {children}
-      </div>
+      </div> 
       <Footer/>
       </div>
     </>
